@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataStructure</title>
+    <script>
+        //array insertion of element
+        let a=[231,64,234,2,23,325,141,1];
+        // let postion=4;
+        // let new_element=29;
+        
+        insertdata=()=>{
+           index= document.getElementById("indexof").value
+           new_element= document.getElementById("valueof").value
+           
+           for(let i=a.length-1;i>=0;i--){
+            if (i>=index){
+                a[i+1]=a[i]
+                if(i==index){
+                    a[i]=new_element
+                }
+            }
+           
+
+        }
+        alert(a)
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="indexof">
+    <input type="text" id="valueof">
+
+    <button onclick="{insertdata()}">Get Data</button>
+</body>
+</html>
